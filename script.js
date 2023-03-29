@@ -8,10 +8,10 @@ const lcArray = lcl.split("")
 const ucArray = ucl.split("")
 const scArray = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "}", "|", "~"]
 
-var finalPassword = []
 // make a random number generator that is generating 0<=x<=2 depending on which criteria was given, assign the arrays above to a numbers 0-2, then whatever number the generator makes, use if then statements to determine the array that we use, then we use another random number generator to pick out something from the array (within its length) and adds that to a new array for our final password
 
 function generatePassword() {
+  var finalPassword = []
   function passLengthFunc() {
     passLength = prompt("How long would you like your password to be?")
     if (passLength === null) {
