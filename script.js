@@ -8,6 +8,7 @@ const lcArray = lcl.split("")
 const ucArray = ucl.split("")
 const scArray = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "}", "|", "~"]
 
+var finalPassword = []
 // make a random number generator that is generating 0<=x<=2 depending on which criteria was given, assign the arrays above to a numbers 0-2, then whatever number the generator makes, use if then statements to determine the array that we use, then we use another random number generator to pick out something from the array (within its length) and adds that to a new array for our final password
 
 function generatePassword() {
@@ -45,24 +46,55 @@ function generatePassword() {
     return sc;
   }
   passLengthFunc() // starts the series
-
+  
   function criteriaSelector() {
     Number(passLength)
     if (lc && uc && sc) {
       for (var x=0;x<passLength;x=x+1) {
-        
+        let y = arrayChooser(3);
+        if (y === 2) {
+          let z = Math.floor(Math.random() * lcArray.length)
+          z = lcArray[z]
+          finalPassword.unshift(z)
+        } else if (y === 1) {
+          let z = Math.floor(Math.random() * ucArray.length)
+          z = ucArray[z]
+          finalPassword.unshift(z)
+        } else if (y === 0) {
+          let z = Math.floor(Math.random() * scArray.length)
+          z = scArray[z]
+          finalPassword.unshift(z)
+        }
       }
     } else if (lc && uc) {
       for (var x=0;x<passLength;x=x+1) {
-        
+        let y = arrayChooser(2);
+        if (y === 1) {
+          let z = Math.floor(Math.random() * lcArray.length)
+          z = lcArray[z]
+          finalPassword.unshift(z)
+        } else if (y === 0) {
+          let z = Math.floor(Math.random() * ucArray.length)
+          z = ucArray[z]
+          finalPassword.unshift(z)
+      }
       }
     } else {
       for (var x=0;x<passLength;x=x+1) {
-        
+        let z = Math.floor(Math.random() * lcArray.length)
+          z = lcArray[z]
+          finalPassword.unshift(z)
       }
     }
   }
+  
+  function arrayChooser(max) {
+    return Math.floor(Math.random()*max)
+  }
+  
+  return finalPassword.join("");
 }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword(); //the return value of generatePassword() function should be the string value of the password we generated
