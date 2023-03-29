@@ -1,14 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-const specialcharacters = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "}", "|", "~"]
+const specialcharactersarr = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "}", "|", "~"]
 const lowercaseletters = "abcdefghijklmnopqrstuvwxyz"
 const uppercaseletters = lowercaseletters.toLocaleUpperCase()
-
-var passlengthprompt;
-var lowercaseconfirmation;
-var uppercaseconfirmation;
-var speccharsconfirmation;
+const lowercasearray = lowercaseletters.split("")
+const uppercasearray = uppercaseletters.split("")
 
 function generatePassword() {
   function passlength() {
@@ -44,7 +41,6 @@ function generatePassword() {
 
 
   
-  return;
 }
 
 
