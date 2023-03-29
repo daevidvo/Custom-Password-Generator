@@ -53,13 +53,15 @@ function generatePassword() {
         
       }
     } else if (lc && uc) {
-      console.log("thing for when lc and uc criteria is met")
+      for (var x=0;x<passLength;x=x+1) {
+        
+      }
     } else {
-      console.log("thing for when only lc criteria is met")
+      for (var x=0;x<passLength;x=x+1) {
+        
+      }
     }
   }
-
-  return;
 }
 // Write password to the #password input
 function writePassword() {
@@ -73,3 +75,4 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// credits https://www.w3schools.com/jsref/jsref_obj_array.asp, https://www.w3schools.com/jsref/jsref_obj_string.asp
