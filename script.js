@@ -32,26 +32,38 @@ function generatePassword() {
 
   function lcPromptFunc() {
     lc = confirm("Would you like lowercase letters in your password?");
+    if (lc) {
+      alert("You have chosen to include lowercase letters in your password!"); // this is a confirmation message that the user wants lowercase letters in their password
+    }
     ucPromptFunc();
     return lc; //needs to return lc boolean value so that criteriaSelector() can compare the values and chooses the right password criterias
   }
 
   function ucPromptFunc() {
     uc = confirm("Would you like uppercase letters in your password?");
+    if (uc) {
+      alert("You have chosen to include uppercase letters in your password!"); // this is a confirmation message that the user wants uppercase letters in their password
+    }
     scPromptFunc();
-    return uc; //returns uc for same reason on line 34
+    return uc; //returns uc for same reason on line 39
   }
 
   function scPromptFunc() {
     sc = confirm("Would you like special characters in your password?");
+    if (sc) {
+      alert("You have chosen to include special characters in your password!"); // this is a confirmation message that the user wants special characters in their password
+    }
     numsPromptFunc();
-    return sc; //returns sc for the same reason on line 34
+    return sc; //returns sc for the same reason on line 39
   }
 
   function numsPromptFunc() {
     nc = confirm("Would you like numbers in your password?");
+    if (nc) {
+      alert("You have chosen to include numbers in your password!"); // this is a confirmation message that the user wants numbers in their password
+    }
     criteriaSelector();
-    return nc; //returns nc for the same reason on line 34
+    return nc; //returns nc for the same reason on line 39
   }
   passLengthFunc() // starts the series
   
