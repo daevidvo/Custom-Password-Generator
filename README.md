@@ -87,7 +87,7 @@ One thing to note is that by using the .unshift() modifier to the finalPassword 
 
 To use the random password generator, simply visit this website: [Random Password Generator](https://daevidvo.github.io/Custom-Password-Generator/)
 
-Or you can download the contents of this repository and run index.html in your browser for a completely local experience.
+Or you can download the contents of this repository and run index.html in your browser for a completely local experience. To start generating the password, simply click on the red **"Generate Password"** button.
 
 ---
 
