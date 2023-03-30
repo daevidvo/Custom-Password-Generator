@@ -98,7 +98,7 @@ Or you can download the contents of this repository and run index.html in your b
 * [Github](https://www.github.com/daevidvo)
 * [LinkedIn](https://www.linkedin.com/in/daevidvo)
 
-<br>
+---
 
 ## Credits
 
@@ -115,7 +115,7 @@ Some other worthwhile links that really helped me in building this application c
 * [JavaScript Array Methods and Properties](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 * [JavaScript String Methods and Properties](https://www.w3schools.com/jsref/jsref_obj_string.asp)
 
-<br>
+---
 
 ## License
 
