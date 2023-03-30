@@ -19,7 +19,7 @@ function generatePassword() {
     if (passLength === null) { //if the user cancels instead of writing an input
       alert("Please choose a number");
     } else if (isNaN(Number(passLength))) { //fixes bug where if a user input anything other than a number, it would allow them to continue to lcPromptFunc()
-      // WOW I FINALLY GOT THIS TO WORK IT ONLY TOOK ME LIKE AN HOUR credit: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+      // WOW I FINALLY GOT THIS TO WORK IT ONLY TOOK ME LIKE AN HOUR
       alert("Please use numbers only"); //warns the user to use numbers only if they were to input anything other than an number
     } else if (passLength < 8) {
       alert("Password length must be more than 7"); 
@@ -224,5 +224,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// credits https://www.w3schools.com/jsref/jsref_obj_array.asp, https://www.w3schools.com/jsref/jsref_obj_string.asp
