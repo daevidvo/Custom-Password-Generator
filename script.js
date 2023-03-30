@@ -103,6 +103,17 @@ function generatePassword() {
           numArrayFunc();
         }
       }
+    } else if (lc && uc && nc && !(sc)) { //when the user answers yes to all the prompts except the third one 
+      for (var x=0;x<passLength;x=x+1) {
+        let arrayChosen = arrayChooser(3);
+        if (arrayChosen === 2) {
+          lcArrayFunc();
+        } else if (arrayChosen === 1) {
+          ucArrayFunc();
+        } else if (arrayChosen === 0) {
+          numArrayFunc();
+        }
+      }
     } else if (lc && uc && !(sc && nc)) { //when the user only answers yes to first two prompts  
       for (var x=0;x<passLength;x=x+1) {
         let arrayChosen = arrayChooser(2);
